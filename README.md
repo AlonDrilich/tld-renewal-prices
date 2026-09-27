@@ -91,5 +91,6 @@ Updated every Monday by a GitHub Action ([`scripts/snapshot.py`](scripts/snapsho
 Data: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — cite "TLD renewal prices
 (github.com/AlonDrilich/tld-renewal-prices)". Code: MIT.
 
+Browse and search the same data at **[namesale.store/renewal-prices](https://namesale.store/renewal-prices)**.
 Maintained by [NameSale](https://namesale.store/), a marketplace of brandable domain names where
 each listing shows its extension's yearly renewal next to the price.
