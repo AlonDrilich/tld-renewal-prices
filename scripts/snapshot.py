@@ -14,6 +14,9 @@ import ssl
 import urllib.request
 
 API = "https://api.porkbun.com/api/json/v3/pricing/get"
+# Porkbun also sells ~270 Handshake names (doge, 0z...) that are not in the DNS root, and
+# second-level products (co.uk). Only IANA root-zone TLDs are kept.
+IANA = "https://data.iana.org/TLD/tlds-alpha-by-domain.txt"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 SNAPS = DATA / "snapshots"
@@ -26,18 +29,31 @@ COMMON = ["com", "net", "org", "io", "ai", "app", "dev", "me", "xyz", "tech", "s
           "fun", "club", "blog", "news", "media", "email", "health", "finance", "money"]
 
 
-def fetch():
-    req = urllib.request.Request(API, data=b"{}", headers={"content-type": "application/json"})
+def ssl_ctx():
     try:  # python.org builds on macOS ship without system CA roots
         import certifi
-        ctx = ssl.create_default_context(cafile=certifi.where())
+        return ssl.create_default_context(cafile=certifi.where())
     except ImportError:
-        ctx = ssl.create_default_context()
-    with urllib.request.urlopen(req, timeout=30, context=ctx) as r:
+        return ssl.create_default_context()
+
+
+def root_zone():
+    with urllib.request.urlopen(IANA, timeout=30, context=ssl_ctx()) as r:
+        lines = r.read().decode().splitlines()
+    tlds = {l.strip().lower() for l in lines if l.strip() and not l.startswith("#")}
+    if len(tlds) < 1000:
+        raise SystemExit(f"IANA list looks wrong ({len(tlds)} entries)")
+    return tlds
+
+
+def fetch():
+    req = urllib.request.Request(API, data=b"{}", headers={"content-type": "application/json"})
+    with urllib.request.urlopen(req, timeout=30, context=ssl_ctx()) as r:
         body = json.load(r)
     if body.get("status") != "SUCCESS":
         raise SystemExit(f"API error: {body}")
-    return body["pricing"]
+    zone = root_zone()
+    return {t: p for t, p in body["pricing"].items() if t in zone}
 
 
 def to_rows(pricing):
@@ -109,7 +125,7 @@ def readme(date, rows, change_lines, prev_date):
     return f"""# TLD renewal prices: first year vs. renewal
 
 Cheap first-year domain prices often hide a much higher renewal. This repo snapshots, every week,
-the **first-year and renewal list price of {len(rows)} domain extensions** from one registrar's
+the **first-year and renewal list price of {len(rows)} top-level domains** (every IANA root-zone TLD it sells) from one registrar's
 public pricing endpoint, so the gap is easy to check before you register a name.
 
 **Latest snapshot: {date}.** {n2} of {len(rows)} extensions renew at **2× or more** their
@@ -159,7 +175,7 @@ def main():
     SNAPS.mkdir(parents=True, exist_ok=True)
     date = dt.date.today().isoformat()
     rows = to_rows(fetch())
-    if len(rows) < 300:
+    if len(rows) < 400:
         raise SystemExit(f"Only {len(rows)} TLDs returned — refusing to overwrite the data")
     olds = sorted(p for p in SNAPS.glob("porkbun-*.csv") if p.stem != f"porkbun-{date}")
     prev, prev_date = ({}, None) if not olds else (read_csv(olds[-1]), olds[-1].stem[len("porkbun-"):])
