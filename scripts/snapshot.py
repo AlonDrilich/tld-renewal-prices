@@ -165,6 +165,7 @@ first-year price; {n5} renew at 5× or more.
 
 - [`data/latest.csv`](data/latest.csv) — the current snapshot
 - [`data/snapshots/`](data/snapshots/) — one dated CSV per week, the full history
+- Also on Hugging Face: [AlonDrilichHF/tld-renewal-prices](https://huggingface.co/datasets/AlonDrilichHF/tld-renewal-prices) (latest snapshot)
 - Columns: `{"`, `".join(FIELDS)}`
 
 Updated every Monday by a GitHub Action ([`scripts/snapshot.py`](scripts/snapshot.py)).

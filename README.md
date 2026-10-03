@@ -107,6 +107,7 @@ Moves under 10 cents or 1% are left out as currency noise.
 
 - [`data/latest.csv`](data/latest.csv) — the current snapshot
 - [`data/snapshots/`](data/snapshots/) — one dated CSV per week, the full history
+- Also on Hugging Face: [AlonDrilichHF/tld-renewal-prices](https://huggingface.co/datasets/AlonDrilichHF/tld-renewal-prices) (latest snapshot)
 - Columns: `tld`, `first_year_usd`, `renewal_usd`, `transfer_usd`, `renewal_minus_first_year_usd`, `renewal_to_first_year_ratio`, `first_year_has_coupon`
 
 Updated every Monday by a GitHub Action ([`scripts/snapshot.py`](scripts/snapshot.py)).
