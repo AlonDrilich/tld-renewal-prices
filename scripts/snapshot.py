@@ -63,6 +63,8 @@ def to_rows(pricing):
             reg, ren = float(p["registration"]), float(p["renewal"])
         except (KeyError, TypeError, ValueError):
             continue
+        if reg <= 0 or ren <= 0:  # listed but not on sale yet (e.g. .dot at $0.00 on 2026-10-03)
+            continue
         out.append({
             "tld": tld,
             "first_year_usd": f"{reg:.2f}",

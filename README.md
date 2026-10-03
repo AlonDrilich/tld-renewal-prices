@@ -1,10 +1,10 @@
 # TLD renewal prices: first year vs. renewal
 
 Cheap first-year domain prices often hide a much higher renewal. This repo snapshots, every week,
-the **first-year and renewal list price of 532 top-level domains** (every IANA root-zone TLD it sells) from one registrar's
+the **first-year and renewal list price of 531 top-level domains** (every IANA root-zone TLD it sells) from one registrar's
 public pricing endpoint, so the gap is easy to check before you register a name.
 
-**Latest snapshot: 2026-10-03.** 304 of 532 extensions renew at **2× or more** their
+**Latest snapshot: 2026-10-03.** 304 of 531 extensions renew at **2× or more** their
 first-year price; 170 renew at 5× or more.
 
 > Source: Porkbun's public pricing API (`https://api.porkbun.com/api/json/v3/pricing/get`), list prices in USD, fetched as-is.
