@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+type: dataset
+title: "TLD renewal prices: first year vs. renewal"
+abstract: >-
+  Weekly snapshots of the first-year and renewal list price, in USD, of every
+  top-level domain in the IANA root zone that one registrar (Porkbun) sells,
+  taken from its public pricing API. One registrar's list prices, not a market
+  average.
+authors:
+  - name: "NameSale"
+    website: "https://namesale.store"
+repository-code: "https://github.com/AlonDrilich/tld-renewal-prices"
+url: "https://namesale.store/renewal-prices"
+license: CC-BY-4.0
+keywords:
+  - domain names
+  - top-level domains
+  - TLD
+  - domain renewal prices
+  - pricing
+  - open data
