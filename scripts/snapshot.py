@@ -98,11 +98,17 @@ def table(rows):
     return "\n".join(lines)
 
 
+def moved(a, b):
+    """Ignore cent-level drift: ccTLDs priced in other currencies move a few cents a day."""
+    a, b = float(a), float(b)
+    return abs(b - a) >= 0.10 and a > 0 and abs(b - a) / a >= 0.01
+
+
 def changes(prev, cur):
     out = []
     for tld, r in sorted(cur.items()):
         p = prev.get(tld)
-        if p and (p["first_year_usd"], p["renewal_usd"]) != (r["first_year_usd"], r["renewal_usd"]):
+        if p and (moved(p["first_year_usd"], r["first_year_usd"]) or moved(p["renewal_usd"], r["renewal_usd"])):
             out.append(f"| .{tld} | ${p['first_year_usd']} → ${r['first_year_usd']} | "
                        f"${p['renewal_usd']} → ${r['renewal_usd']} |")
     return out
@@ -117,9 +123,10 @@ def readme(date, rows, change_lines, prev_date):
     flat = [r for r in common if ratio(r) <= 1.0]
     worst = sorted(rows, key=lambda r: float(r["renewal_minus_first_year_usd"]), reverse=True)[:15]
     if change_lines:
-        ch = ("| TLD | First year | Renewal |\n|---|---|---|\n" + "\n".join(change_lines))
+        ch = ("Moves under 10 cents or 1% are left out as currency noise.\n\n"
+              "| TLD | First year | Renewal |\n|---|---|---|\n" + "\n".join(change_lines))
     elif prev_date:
-        ch = f"No list-price changes since the {prev_date} snapshot."
+        ch = f"No list price moved by 10 cents and 1% or more since the {prev_date} snapshot."
     else:
         ch = "First snapshot — changes appear from next week."
     return f"""# TLD renewal prices: first year vs. renewal
