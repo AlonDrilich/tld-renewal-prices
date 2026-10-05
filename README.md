@@ -4,7 +4,7 @@ Cheap first-year domain prices often hide a much higher renewal. This repo snaps
 the **first-year and renewal list price of 531 top-level domains** (every IANA root-zone TLD it sells) from one registrar's
 public pricing endpoint, so the gap is easy to check before you register a name.
 
-**Latest snapshot: 2026-10-03.** 304 of 531 extensions renew at **2× or more** their
+**Latest snapshot: 2026-10-05.** 304 of 531 extensions renew at **2× or more** their
 first-year price; 170 renew at 5× or more.
 
 > Source: Porkbun's public pricing API (`https://api.porkbun.com/api/json/v3/pricing/get`), list prices in USD, fetched as-is.
@@ -76,32 +76,7 @@ first-year price; 170 renew at 5× or more.
 
 ## Changes since the previous snapshot
 
-Moves under 10 cents or 1% are left out as currency noise.
-
-| TLD | First year | Renewal |
-|---|---|---|
-| .au | $7.72 → $8.36 | $7.72 → $8.36 |
-| .bond | $1.34 → $1.80 | $15.96 → $15.96 |
-| .bot | $40.00 → $52.01 | $52.01 → $52.01 |
-| .cfd | $1.54 → $1.80 | $15.96 → $15.96 |
-| .cyou | $1.54 → $1.80 | $15.96 → $15.96 |
-| .deal | $25.00 → $31.41 | $31.41 → $31.41 |
-| .fast | $20.00 → $23.69 | $23.69 → $23.69 |
-| .free | $25.00 → $31.41 | $31.41 → $31.41 |
-| .hot | $30.00 → $41.71 | $41.71 → $41.71 |
-| .icu | $2.56 → $3.59 | $15.96 → $15.96 |
-| .kyoto | $41.88 → $40.98 | $41.88 → $40.98 |
-| .moi | $17.50 → $21.11 | $21.11 → $21.11 |
-| .nl | $7.78 → $7.65 | $7.78 → $7.65 |
-| .now | $25.00 → $31.41 | $31.41 → $31.41 |
-| .one | $6.69 → $4.63 | $20.08 → $20.08 |
-| .qpon | $1.54 → $2.05 | $9.66 → $9.66 |
-| .sbs | $1.54 → $1.80 | $15.96 → $15.96 |
-| .spot | $17.50 → $21.11 | $21.11 → $21.11 |
-| .talk | $25.00 → $31.41 | $31.41 → $31.41 |
-| .tw | $17.99 → $11.89 | $17.99 → $17.99 |
-| .uk | $4.32 → $5.66 | $5.66 → $5.66 |
-| .you | $16.50 → $18.54 | $18.54 → $18.54 |
+No list price moved by 10 cents and 1% or more since the 2026-10-03 snapshot.
 
 ## Files
 
