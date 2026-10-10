@@ -170,6 +170,16 @@ first-year price; {n5} renew at 5× or more.
 
 Updated every Monday by a GitHub Action ([`scripts/snapshot.py`](scripts/snapshot.py)).
 
+## Daily watch: .com, .net, .org and .io
+
+[`data/watch/changes.csv`](data/watch/changes.csv) is a change log, checked every day
+([`scripts/watch.py`](scripts/watch.py)). It holds the first price seen for each registrar and
+extension, then one row each time a first-year, renewal or transfer price changes, so the day a
+registrar passed a registry price change through can be read from the file. It was started on
+2026-10-10, ahead of Verisign's wholesale .com change on 2026-11-01. Sources are registrars with
+a public pricing API that needs no key: Porkbun (USD) and OVHcloud (USD and EUR). Two registrars
+are a sample, not a market.
+
 ## License
 
 Data: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — cite "TLD renewal prices

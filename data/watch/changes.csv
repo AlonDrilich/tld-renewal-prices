@@ -1,0 +1,13 @@
+observed_utc,source,currency,tld,first_year,renewal,transfer
+2026-10-10,porkbun,USD,com,11.08,11.08,11.08
+2026-10-10,porkbun,USD,net,12.52,12.52,12.52
+2026-10-10,porkbun,USD,org,7.98,11.84,11.84
+2026-10-10,porkbun,USD,io,28.12,51.80,51.80
+2026-10-10,ovh-we,USD,com,9.20,14.69,9.20
+2026-10-10,ovh-we,USD,net,12.19,16.89,15.59
+2026-10-10,ovh-we,USD,org,12.99,14.49,10.49
+2026-10-10,ovh-we,USD,io,62.99,62.69,50.69
+2026-10-10,ovh-ie,EUR,com,7.99,13.49,7.99
+2026-10-10,ovh-ie,EUR,net,10.99,15.19,14.09
+2026-10-10,ovh-ie,EUR,org,12.49,8.78,8.78
+2026-10-10,ovh-ie,EUR,io,57.49,59.79,48.29
