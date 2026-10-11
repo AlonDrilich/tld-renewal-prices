@@ -1,7 +1,11 @@
 name: daily-watch
 on:
   schedule:
-    - cron: "41 6 * * *"   # every day 06:41 UTC
+    # Three chances a day: GitHub runs scheduled jobs on this repo hours late and may skip one.
+    # watch.py writes a row only when a price changed, so extra runs add nothing to the log.
+    - cron: "41 6 * * *"
+    - cron: "23 13 * * *"
+    - cron: "52 20 * * *"
   workflow_dispatch:
 permissions:
   contents: write

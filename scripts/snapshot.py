@@ -172,7 +172,7 @@ Updated every Monday by a GitHub Action ([`scripts/snapshot.py`](scripts/snapsho
 
 ## Daily watch: .com, .net, .org and .io
 
-[`data/watch/changes.csv`](data/watch/changes.csv) is a change log, checked every day
+[`data/watch/changes.csv`](data/watch/changes.csv) is a change log, checked three times a day
 ([`scripts/watch.py`](scripts/watch.py)). It holds the first price seen for each registrar and
 extension, then one row each time a first-year, renewal or transfer price changes, so the day a
 registrar passed a registry price change through can be read from the file. It was started on
