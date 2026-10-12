@@ -4,7 +4,7 @@ Cheap first-year domain prices often hide a much higher renewal. This repo snaps
 the **first-year and renewal list price of 531 top-level domains** (every IANA root-zone TLD it sells) from one registrar's
 public pricing endpoint, so the gap is easy to check before you register a name.
 
-**Latest snapshot: 2026-10-07.** 305 of 531 extensions renew at **2× or more** their
+**Latest snapshot: 2026-10-12.** 305 of 531 extensions renew at **2× or more** their
 first-year price; 182 renew at 5× or more.
 
 > Source: Porkbun's public pricing API (`https://api.porkbun.com/api/json/v3/pricing/get`), list prices in USD, fetched as-is.
@@ -80,9 +80,7 @@ Moves under 10 cents or 1% are left out as currency noise.
 
 | TLD | First year | Renewal |
 |---|---|---|
-| .democrat | $5.66 → $5.66 | $7.83 → $5.66 |
-| .futbol | $5.66 → $5.66 | $7.83 → $5.66 |
-| .republican | $5.66 → $5.66 | $7.83 → $5.66 |
+| .moe | $13.05 → $12.87 | $13.05 → $13.05 |
 
 ## Files
 
