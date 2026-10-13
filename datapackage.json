@@ -1,0 +1,73 @@
+{
+  "profile": "tabular-data-package",
+  "name": "tld-renewal-prices",
+  "title": "TLD renewal prices: first year vs. renewal",
+  "description": "First-year, renewal and transfer list prices in USD for every top-level domain in the IANA root zone that one registrar (Porkbun) sells, from its public pricing API. Weekly snapshots, plus a change log for .com, .net, .org and .io at two registrars (Porkbun and OVHcloud). One registrar's list prices, not a market average.",
+  "homepage": "https://namesale.store/renewal-prices",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Porkbun public pricing API",
+      "path": "https://api.porkbun.com/api/json/v3/pricing/get"
+    },
+    {
+      "title": "IANA root zone database (TLD list)",
+      "path": "https://data.iana.org/TLD/tlds-alpha-by-domain.txt"
+    },
+    {
+      "title": "OVHcloud public order catalog (domains)",
+      "path": "https://eu.api.ovh.com/1.0/order/catalog/public/domain?ovhSubsidiary=IE"
+    }
+  ],
+  "keywords": ["domain names", "TLD", "domain renewal prices", "pricing", "registrar", "open data"],
+  "contributors": [
+    {"title": "NameSale", "path": "https://namesale.store", "role": "maintainer"}
+  ],
+  "resources": [
+    {
+      "name": "latest",
+      "path": "data/latest.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "description": "The current weekly snapshot, one row per TLD.",
+      "schema": {
+        "fields": [
+          {"name": "tld", "type": "string", "description": "Top-level domain without the dot (IANA root zone only)"},
+          {"name": "first_year_usd", "type": "number", "description": "List price for the first year of registration, USD"},
+          {"name": "renewal_usd", "type": "number", "description": "List price for each renewal year, USD"},
+          {"name": "transfer_usd", "type": "number", "description": "List price for a transfer in, USD"},
+          {"name": "renewal_minus_first_year_usd", "type": "number", "description": "renewal_usd minus first_year_usd"},
+          {"name": "renewal_to_first_year_ratio", "type": "number", "description": "renewal_usd divided by first_year_usd"},
+          {"name": "first_year_has_coupon", "type": "string", "constraints": {"enum": ["yes", "no"]}, "description": "Whether the first-year price is a promotion"}
+        ],
+        "primaryKey": "tld"
+      }
+    },
+    {
+      "name": "watch-changes",
+      "path": "data/watch/changes.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "description": "Change log, checked three times a day: the first price seen per registrar and TLD, then one row each time a price changes. observed_utc is the day the watcher saw the price, not the day the registrar changed it.",
+      "schema": {
+        "fields": [
+          {"name": "observed_utc", "type": "date", "description": "UTC day the price was observed"},
+          {"name": "source", "type": "string", "description": "porkbun, ovh-we or ovh-ie"},
+          {"name": "currency", "type": "string", "description": "USD or EUR"},
+          {"name": "tld", "type": "string"},
+          {"name": "first_year", "type": "number"},
+          {"name": "renewal", "type": "number"},
+          {"name": "transfer", "type": "number"}
+        ]
+      }
+    }
+  ]
+}
