@@ -11,3 +11,5 @@ observed_utc,source,currency,tld,first_year,renewal,transfer
 2026-10-10,ovh-ie,EUR,net,10.99,15.19,14.09
 2026-10-10,ovh-ie,EUR,org,12.49,8.78,8.78
 2026-10-10,ovh-ie,EUR,io,57.49,59.79,48.29
+2026-10-15,ovh-we,USD,com,9.20,16.49,9.20
+2026-10-15,ovh-ie,EUR,com,7.99,14.29,7.99
