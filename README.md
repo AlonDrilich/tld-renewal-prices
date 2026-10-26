@@ -4,7 +4,7 @@ Cheap first-year domain prices often hide a much higher renewal. This repo snaps
 the **first-year and renewal list price of 531 top-level domains** (every IANA root-zone TLD it sells) from one registrar's
 public pricing endpoint, so the gap is easy to check before you register a name.
 
-**Latest snapshot: 2026-10-19.** 305 of 531 extensions renew at **2× or more** their
+**Latest snapshot: 2026-10-26.** 306 of 531 extensions renew at **2× or more** their
 first-year price; 182 renew at 5× or more.
 
 > Source: Porkbun's public pricing API (`https://api.porkbun.com/api/json/v3/pricing/get`), list prices in USD, fetched as-is.
@@ -80,8 +80,9 @@ Moves under 10 cents or 1% are left out as currency noise.
 
 | TLD | First year | Renewal |
 |---|---|---|
-| .moe | $12.87 → $6.69 | $13.05 → $13.05 |
-| .tw | $11.89 → $13.99 | $17.99 → $17.99 |
+| .ca | $8.70 → $8.81 | $9.18 → $9.18 |
+| .cv | $8.03 → $2.36 | $8.03 → $8.03 |
+| .cx | $16.53 → $16.53 | $16.75 → $16.98 |
 
 ## Files
 
