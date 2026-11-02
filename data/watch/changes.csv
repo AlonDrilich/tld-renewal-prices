@@ -14,3 +14,5 @@ observed_utc,source,currency,tld,first_year,renewal,transfer
 2026-10-15,ovh-we,USD,com,9.20,16.49,9.20
 2026-10-15,ovh-ie,EUR,com,7.99,14.29,7.99
 2026-11-01,porkbun,USD,com,11.81,11.81,11.81
+2026-11-02,ovh-we,USD,com,9.99,16.49,9.99
+2026-11-02,ovh-ie,EUR,com,8.49,14.29,8.49
