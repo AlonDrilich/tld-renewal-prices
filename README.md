@@ -1,11 +1,11 @@
 # TLD renewal prices: first year vs. renewal
 
 Cheap first-year domain prices often hide a much higher renewal. This repo snapshots, every week,
-the **first-year and renewal list price of 531 top-level domains** (every IANA root-zone TLD it sells) from one registrar's
+the **first-year and renewal list price of 532 top-level domains** (every IANA root-zone TLD it sells) from one registrar's
 public pricing endpoint, so the gap is easy to check before you register a name.
 
-**Latest snapshot: 2026-10-26.** 306 of 531 extensions renew at **2× or more** their
-first-year price; 182 renew at 5× or more.
+**Latest snapshot: 2026-11-02.** 308 of 532 extensions renew at **2× or more** their
+first-year price; 183 renew at 5× or more.
 
 > Source: Porkbun's public pricing API (`https://api.porkbun.com/api/json/v3/pricing/get`), list prices in USD, fetched as-is.
 > One registrar's prices on one date — **not a market average** and not a quote from any other
@@ -27,9 +27,9 @@ first-year price; 182 renew at 5× or more.
 | .live | $2.57 | $31.41 | 12.2× |
 | .fun | $2.57 | $31.41 | 12.2× |
 | .website | $1.96 | $21.11 | 10.8× |
+| .blog | $2.06 | $21.11 | 10.2× |
 | .media | $4.63 | $40.68 | 8.8× |
 | .finance | $6.69 | $58.19 | 8.7× |
-| .blog | $2.57 | $21.11 | 8.2× |
 | .agency | $3.60 | $27.29 | 7.6× |
 | .company | $2.57 | $19.05 | 7.4× |
 | .tech | $6.99 | $50.98 | 7.3× |
@@ -80,9 +80,12 @@ Moves under 10 cents or 1% are left out as currency noise.
 
 | TLD | First year | Renewal |
 |---|---|---|
-| .ca | $8.70 → $8.81 | $9.18 → $9.18 |
-| .cv | $8.03 → $2.36 | $8.03 → $8.03 |
-| .cx | $16.53 → $16.53 | $16.75 → $16.98 |
+| .asia | $11.84 → $2.06 | $11.84 → $11.84 |
+| .blog | $2.57 → $2.06 | $21.11 → $21.11 |
+| .com | $11.08 → $11.81 | $11.08 → $11.81 |
+| .mobile | $15.96 → $12.87 | $15.96 → $15.96 |
+| .mx | $35.57 → $17.99 | $41.23 → $41.23 |
+| .tw | $13.99 → $11.89 | $17.99 → $17.99 |
 
 ## Files
 
