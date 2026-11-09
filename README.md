@@ -1,13 +1,11 @@
 # TLD renewal prices: first year vs. renewal
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24082643.svg)](https://doi.org/10.5281/zenodo.24082643)
-
 Cheap first-year domain prices often hide a much higher renewal. This repo snapshots, every week,
 the **first-year and renewal list price of 532 top-level domains** (every IANA root-zone TLD it sells) from one registrar's
 public pricing endpoint, so the gap is easy to check before you register a name.
 
-**Latest snapshot: 2026-11-02.** 308 of 532 extensions renew at **2× or more** their
-first-year price; 183 renew at 5× or more.
+**Latest snapshot: 2026-11-09.** 309 of 532 extensions renew at **2× or more** their
+first-year price; 188 renew at 5× or more.
 
 > Source: Porkbun's public pricing API (`https://api.porkbun.com/api/json/v3/pricing/get`), list prices in USD, fetched as-is.
 > One registrar's prices on one date — **not a market average** and not a quote from any other
@@ -61,20 +59,20 @@ first-year price; 183 renew at 5× or more.
 | TLD | First year | Renewal | Renewal ÷ first year |
 |---|---:|---:|---:|
 | .feedback | $9.27 | $309.47 | 33.4× |
+| .realty | $10.80 | $288.88 | 26.8× |
 | .movie | $36.56 | $309.47 | 8.5× |
 | .watches | $52.01 | $257.98 | 5.0× |
-| .realty | $93.20 | $288.88 | 3.1× |
 | .casino | $7.72 | $143.67 | 18.6× |
 | .creditcard | $5.66 | $129.25 | 22.8× |
 | .travel | $15.96 | $129.25 | 8.1× |
 | .investments | $8.24 | $114.83 | 13.9× |
 | .doctor | $8.24 | $102.47 | 12.4× |
 | .ceo | $9.78 | $103.50 | 10.6× |
+| .property | $10.80 | $103.50 | 9.6× |
 | .energy | $11.84 | $102.47 | 8.7× |
 | .gold | $5.66 | $92.17 | 16.3× |
 | .credit | $6.69 | $92.17 | 13.8× |
 | .loans | $10.81 | $93.20 | 8.6× |
-| .rich | $78.99 | $160.71 | 2.0× |
 
 ## Changes since the previous snapshot
 
@@ -82,12 +80,26 @@ Moves under 10 cents or 1% are left out as currency noise.
 
 | TLD | First year | Renewal |
 |---|---|---|
-| .asia | $11.84 → $2.06 | $11.84 → $11.84 |
-| .blog | $2.57 → $2.06 | $21.11 → $21.11 |
-| .com | $11.08 → $11.81 | $11.08 → $11.81 |
-| .mobile | $15.96 → $12.87 | $15.96 → $15.96 |
-| .mx | $35.57 → $17.99 | $41.23 → $41.23 |
-| .tw | $13.99 → $11.89 | $17.99 → $17.99 |
+| .art | $3.60 → $2.18 | $21.11 → $21.11 |
+| .asia | $2.06 → $1.03 | $11.84 → $11.84 |
+| .au | $8.47 → $8.31 | $8.47 → $8.31 |
+| .bar | $2.57 → $1.53 | $52.01 → $52.01 |
+| .bond | $1.80 → $1.28 | $15.96 → $15.96 |
+| .buzz | $2.05 → $1.64 | $26.26 → $26.26 |
+| .cfd | $1.80 → $1.28 | $15.96 → $15.96 |
+| .cyou | $1.80 → $1.28 | $15.96 → $15.96 |
+| .diy | $4.63 → $2.56 | $31.41 → $31.41 |
+| .food | $4.63 → $2.56 | $31.41 → $31.41 |
+| .icu | $3.59 → $1.54 | $15.96 → $15.96 |
+| .latino | $12.87 → $10.81 | $15.96 → $15.96 |
+| .lifestyle | $4.63 → $2.56 | $31.41 → $31.41 |
+| .living | $4.63 → $2.56 | $31.41 → $31.41 |
+| .love | $8.75 → $2.56 | $23.17 → $23.17 |
+| .mobile | $12.87 → $10.81 | $15.96 → $15.96 |
+| .property | $52.01 → $10.80 | $103.50 → $103.50 |
+| .qpon | $2.05 → $1.54 | $9.66 → $9.66 |
+| .realty | $93.20 → $10.80 | $288.88 → $288.88 |
+| .sbs | $1.80 → $1.28 | $15.96 → $15.96 |
 
 ## Files
 
