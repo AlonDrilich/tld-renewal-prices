@@ -1,0 +1,26 @@
+{
+  "upload_type": "dataset",
+  "title": "TLD renewal prices: first year vs. renewal",
+  "creators": [
+    {
+      "name": "NameSale"
+    }
+  ],
+  "description": "Weekly snapshots of the first-year and renewal list price, in USD, of every top-level domain in the IANA root zone that one registrar (Porkbun) sells, taken from its public pricing API. One registrar's list prices, not a market average. Interactive view: <a href=\"https://namesale.store/renewal-prices\">namesale.store/renewal-prices</a>.",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "domain names",
+    "top-level domains",
+    "TLD",
+    "domain renewal prices",
+    "pricing",
+    "open data"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://namesale.store/renewal-prices",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}

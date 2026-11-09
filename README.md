@@ -1,5 +1,7 @@
 # TLD renewal prices: first year vs. renewal
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24082643.svg)](https://doi.org/10.5281/zenodo.24082643)
+
 Cheap first-year domain prices often hide a much higher renewal. This repo snapshots, every week,
 the **first-year and renewal list price of 532 top-level domains** (every IANA root-zone TLD it sells) from one registrar's
 public pricing endpoint, so the gap is easy to check before you register a name.
